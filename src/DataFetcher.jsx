@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 // const fetchItems = async () => {
 //   const [items, setItems] = useState([]);
@@ -27,9 +27,6 @@ const DataFetcher = () => {
       .then((response) => response.json())
       .then((data) => setData({ data }))
       .catch((err) => console.log(err));
-  }, []);
-
-  useEffect(() => {
     fetchData();
   }, []);
 
@@ -61,7 +58,12 @@ const DataFetcher = () => {
       ) : (
         <ul>
           {data.items &&
-            data.items.map((items) => <li key={[items.id]}>{items.name}</li>)}
+            data.items.map((items) => (
+              <li key={[items.id]}>
+                {items.name}
+                {items.description}
+              </li>
+            ))}
         </ul>
       )}
     </div>
