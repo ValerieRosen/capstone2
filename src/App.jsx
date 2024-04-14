@@ -19,8 +19,10 @@ export default function App() {
             <Route path="/ItemShopUpdates" element={<ItemShopUpdates />} />
             <Route path="/BattleRoyaleNews" element={<BattleRoyaleNews />} />
           </Routes>
+          <div>
+            <DataFetcher />
+          </div>
         </Router>
-        <DataFetcher />
       </div>
     </>
     /* <div align="center">
