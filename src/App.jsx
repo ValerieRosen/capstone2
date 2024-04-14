@@ -11,7 +11,6 @@ import DataFetcher from "./DataFetcher";
 export default function App() {
   return (
     <>
-      <DataFetcher />
       <div className="App">
         <Router>
           <Navbar />
