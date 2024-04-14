@@ -5,7 +5,7 @@ export default function DataFetcher() {
 
   useEffect(() => {
     const getItemList = async () => {
-      const url = "https://fortnite-api.com/v2/cosmetics/br/new";
+      const url = "https://fortnite-api.com/v2/news/br";
 
       try {
         const response = await fetch(url);
@@ -25,7 +25,7 @@ export default function DataFetcher() {
         data.map(([items]) => {
           return (
             <div key={items.id}>
-              console.log(response)
+              console.log(data)
               <div key={items}>
                 <ul>{items.name}</ul>
               </div>
