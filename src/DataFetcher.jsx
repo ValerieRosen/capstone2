@@ -11,6 +11,7 @@ export default function DataFetcher() {
         const response = await fetch(url);
         const data = await response.json();
         setData(data);
+        console.log(data.build);
         console.log(data);
       } catch (err) {
         console.error(err);
@@ -18,14 +19,13 @@ export default function DataFetcher() {
     };
     getItemList();
   }, []);
-
+  console.log(data.build);
   return (
     <>
       {data.items &&
         data.map(([items]) => {
           return (
             <div key={items.id}>
-              console.log(response)
               <div key={items}>
                 <ul>{items.name}</ul>
               </div>
